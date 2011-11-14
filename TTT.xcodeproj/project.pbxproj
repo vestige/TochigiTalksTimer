@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D99650531471D1BA00821F6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99650521471D1B900821F6B /* Cocoa.framework */; };
+		D99650551471D1BA00821F6B /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99650541471D1BA00821F6B /* MacRuby.framework */; };
+		D996505C1471D1BA00821F6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D996505A1471D1BA00821F6B /* InfoPlist.strings */; };
+		D996505E1471D1BA00821F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D996505D1471D1BA00821F6B /* main.m */; };
+		D99650631471D1BA00821F6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99650611471D1BA00821F6B /* MainMenu.xib */; };
+		D99650661471D1BA00821F6B /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = D99650651471D1BA00821F6B /* rb_main.rb */; };
+		D99650681471D1BA00821F6B /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = D99650671471D1BA00821F6B /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D996504E1471D1B900821F6B /* TTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99650521471D1B900821F6B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D99650541471D1BA00821F6B /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		D99650591471D1BA00821F6B /* TTT-Info.plist */ = {isa = PBXFileReference; path = "TTT-Info.plist"; sourceTree = "<group>"; };
+		D996505B1471D1BA00821F6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D996505D1471D1BA00821F6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D996505F1471D1BA00821F6B /* TTT-Prefix.pch */ = {isa = PBXFileReference; path = "TTT-Prefix.pch"; sourceTree = "<group>"; };
+		D99650621471D1BA00821F6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D99650651471D1BA00821F6B /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		D99650671471D1BA00821F6B /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D996504B1471D1B900821F6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99650531471D1BA00821F6B /* Cocoa.framework in Frameworks */,
+				D99650551471D1BA00821F6B /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D99650431471D1B900821F6B = {
+			isa = PBXGroup;
+			children = (
+				D99650571471D1BA00821F6B /* TTT */,
+				D99650511471D1B900821F6B /* Frameworks */,
+				D996504F1471D1B900821F6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D996504F1471D1B900821F6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D996504E1471D1B900821F6B /* TTT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D99650511471D1B900821F6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D99650521471D1B900821F6B /* Cocoa.framework */,
+				D99650541471D1BA00821F6B /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D99650571471D1BA00821F6B /* TTT */ = {
+			isa = PBXGroup;
+			children = (
+				D99650671471D1BA00821F6B /* AppDelegate.rb */,
+				D99650601471D1BA00821F6B /* Resources */,
+				D99650641471D1BA00821F6B /* Other Sources */,
+				D99650581471D1BA00821F6B /* Supporting Files */,
+			);
+			path = TTT;
+			sourceTree = "<group>";
+		};
+		D99650581471D1BA00821F6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D99650591471D1BA00821F6B /* TTT-Info.plist */,
+				D996505A1471D1BA00821F6B /* InfoPlist.strings */,
+				D996505D1471D1BA00821F6B /* main.m */,
+				D996505F1471D1BA00821F6B /* TTT-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D99650601471D1BA00821F6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D99650611471D1BA00821F6B /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D99650641471D1BA00821F6B /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D99650651471D1BA00821F6B /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D99650561471D1BA00821F6B /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = D996506E1471D1BA00821F6B /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		D996504D1471D1B900821F6B /* TTT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D996506B1471D1BA00821F6B /* Build configuration list for PBXNativeTarget "TTT" */;
+			buildPhases = (
+				D996504A1471D1B900821F6B /* Sources */,
+				D996504B1471D1B900821F6B /* Frameworks */,
+				D996504C1471D1B900821F6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTT;
+			productName = TTT;
+			productReference = D996504E1471D1B900821F6B /* TTT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D99650451471D1B900821F6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = D99650481471D1B900821F6B /* Build configuration list for PBXProject "TTT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D99650431471D1B900821F6B;
+			productRefGroup = D996504F1471D1B900821F6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D996504D1471D1B900821F6B /* TTT */,
+				D99650561471D1BA00821F6B /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D996504C1471D1B900821F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D996505C1471D1BA00821F6B /* InfoPlist.strings in Resources */,
+				D99650631471D1BA00821F6B /* MainMenu.xib in Resources */,
+				D99650661471D1BA00821F6B /* rb_main.rb in Resources */,
+				D99650681471D1BA00821F6B /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D996504A1471D1B900821F6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D996505E1471D1BA00821F6B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D996505A1471D1BA00821F6B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D996505B1471D1BA00821F6B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D99650611471D1BA00821F6B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D99650621471D1BA00821F6B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D99650691471D1BA00821F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D996506A1471D1BA00821F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D996506C1471D1BA00821F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TTT/TTT-Prefix.pch";
+				INFOPLIST_FILE = "TTT/TTT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D996506D1471D1BA00821F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TTT/TTT-Prefix.pch";
+				INFOPLIST_FILE = "TTT/TTT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D996506F1471D1BA00821F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		D99650701471D1BA00821F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D99650481471D1B900821F6B /* Build configuration list for PBXProject "TTT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D99650691471D1BA00821F6B /* Debug */,
+				D996506A1471D1BA00821F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D996506B1471D1BA00821F6B /* Build configuration list for PBXNativeTarget "TTT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D996506C1471D1BA00821F6B /* Debug */,
+				D996506D1471D1BA00821F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D996506E1471D1BA00821F6B /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D996506F1471D1BA00821F6B /* Debug */,
+				D99650701471D1BA00821F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D99650451471D1B900821F6B /* Project object */;
+}
