@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D968FC151477CE1A0013F721 /* rb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D968FC141477CE1A0013F721 /* rb.jpg */; };
 		D99650531471D1BA00821F6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99650521471D1B900821F6B /* Cocoa.framework */; };
 		D99650551471D1BA00821F6B /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99650541471D1BA00821F6B /* MacRuby.framework */; };
 		D996505C1471D1BA00821F6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D996505A1471D1BA00821F6B /* InfoPlist.strings */; };
@@ -14,19 +15,22 @@
 		D99650631471D1BA00821F6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99650611471D1BA00821F6B /* MainMenu.xib */; };
 		D99650661471D1BA00821F6B /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = D99650651471D1BA00821F6B /* rb_main.rb */; };
 		D99650681471D1BA00821F6B /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = D99650671471D1BA00821F6B /* AppDelegate.rb */; };
+		D99650721471D49800821F6B /* fl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D99650711471D49800821F6B /* fl.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D968FC141477CE1A0013F721 /* rb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rb.jpg; path = ../../../../Downloads/rb.jpg; sourceTree = "<group>"; };
 		D996504E1471D1B900821F6B /* TTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99650521471D1B900821F6B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D99650541471D1BA00821F6B /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		D99650591471D1BA00821F6B /* TTT-Info.plist */ = {isa = PBXFileReference; path = "TTT-Info.plist"; sourceTree = "<group>"; };
+		D99650591471D1BA00821F6B /* TTT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TTT-Info.plist"; sourceTree = "<group>"; };
 		D996505B1471D1BA00821F6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D996505D1471D1BA00821F6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D996505F1471D1BA00821F6B /* TTT-Prefix.pch */ = {isa = PBXFileReference; path = "TTT-Prefix.pch"; sourceTree = "<group>"; };
+		D996505F1471D1BA00821F6B /* TTT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTT-Prefix.pch"; sourceTree = "<group>"; };
 		D99650621471D1BA00821F6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D99650651471D1BA00821F6B /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		D99650671471D1BA00821F6B /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		D99650711471D49800821F6B /* fl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fl.jpg; path = ../../../../Pictures/fl.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		D99650571471D1BA00821F6B /* TTT */ = {
 			isa = PBXGroup;
 			children = (
+				D968FC141477CE1A0013F721 /* rb.jpg */,
+				D99650711471D49800821F6B /* fl.jpg */,
 				D99650671471D1BA00821F6B /* AppDelegate.rb */,
 				D99650601471D1BA00821F6B /* Resources */,
 				D99650641471D1BA00821F6B /* Other Sources */,
@@ -177,6 +183,8 @@
 				D99650631471D1BA00821F6B /* MainMenu.xib in Resources */,
 				D99650661471D1BA00821F6B /* rb_main.rb in Resources */,
 				D99650681471D1BA00821F6B /* AppDelegate.rb in Resources */,
+				D99650721471D49800821F6B /* fl.jpg in Resources */,
+				D968FC151477CE1A0013F721 /* rb.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +329,7 @@
 				D996506D1471D1BA00821F6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D996506E1471D1BA00821F6B /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -329,6 +338,7 @@
 				D99650701471D1BA00821F6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
