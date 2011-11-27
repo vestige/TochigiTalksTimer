@@ -12,12 +12,16 @@ class AppDelegate
     message_label.StringValue = ""
     @started = false
 
-    @test_ = 1
+  end
+
+  def init_disp_time(sec)
+    @init_sec = sec
+    disp_time(sec)    
   end
 
   def setup_time_label()
     @count_sec = setup_time_listbox() * 60
-    disp_time(@count_sec)
+    init_disp_time(@count_sec)
   end
   
   def disp_time(time)
@@ -33,22 +37,24 @@ class AppDelegate
                                     atIndex:0)
     select_time.insertItemWithTitle("5",
                                     atIndex:1)
-    select_time.insertItemWithTitle("15",
+    select_time.insertItemWithTitle("20",
                                     atIndex:2)
     select_time.insertItemWithTitle("30",
                                     atIndex:3)
     select_time.synchronizeTitleAndSelectedItem()
-    select_time.selectItemAtIndex(0)
+    select_time.selectItemAtIndex(1)
     
     return select_time.selectedItem.title.to_i
   end
   
   def update_select(sender)
     @count_sec = select_time.selectedItem.title.to_i * 60
-    disp_time(@count_sec)
+    init_disp_time(@count_sec)
   end
 
   def clicked_start(sender)
+    return if (@started)
+    
     select_time.setEnabled(false)
 
     @started = true
@@ -61,23 +67,35 @@ class AppDelegate
                                                     repeats:true)
   end
 
+  def remain()
+    (@end_time - Time.now)
+  end
+
   def step(sender)
-    p "time break."
-    @test_ += 1
-    p @test_
+    # fixme 
+    p remain()
+    
+    tmp = remain().floor
+    p tmp
+    disp_time(tmp)
   end
 
   def clicked_stop(sender)
+    return if (! @started)
+    
     select_time.setEnabled(true)
 
-    @started = false
     @timer.invalidate
+
+    @started = false
+    @count_sec = remain().floor
   end
   
   def clicked_clear(sender)
     return if (@started)
  
-    
+    @started = false
+    disp_time(@init_sec)
   end
 end
 
