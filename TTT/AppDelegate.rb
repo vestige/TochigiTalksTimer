@@ -20,8 +20,10 @@ class AppDelegate
   end
 
   def setup_time_label()
-    @count_sec = setup_time_listbox() * 60
-    init_disp_time(@count_sec)
+    #@count_sec = setup_time_listbox() * 60
+    #init_disp_time(@count_sec)
+    @count_sec = 10
+    init_disp_time(10)
   end
   
   def disp_time(time)
@@ -71,13 +73,19 @@ class AppDelegate
     (@end_time - Time.now)
   end
 
-  def step(sender)
-    # fixme 
-    p remain()
-    
+  def step(sender)    
     tmp = remain().floor
-    p tmp
     disp_time(tmp)
+    if (tmp < 5) && (tmp > 0)
+      message_label.StringValue = "Ready?"
+
+      color = NSColor.yellowColor()
+      @time_label.setTextColor(color) 
+      
+    elsif (tmp == 0)
+      message_label.StringValue = "End"
+      clicked_stop(sender)
+    end
   end
 
   def clicked_stop(sender)
