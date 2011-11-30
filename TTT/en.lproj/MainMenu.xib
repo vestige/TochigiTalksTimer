@@ -1433,7 +1433,7 @@
 									<object class="NSTextFieldCell" key="NSCell" id="109933977">
 										<int key="NSCellFlags">67239424</int>
 										<int key="NSCellFlags2">138412544</int>
-										<string key="NSContents">Tochigi Ruby Kaigi 04</string>
+										<string key="NSContents">Tochigi RubyKaigi 04</string>
 										<object class="NSFont" key="NSSupport">
 											<string key="NSName">Optima-Regular</string>
 											<double key="NSSize">32</double>
@@ -1489,7 +1489,7 @@
 								<object class="NSTextField" id="920653541">
 									<reference key="NSNextResponder" ref="402592919"/>
 									<int key="NSvFlags">268</int>
-									<string key="NSFrame">{{197, 496}, {406, 80}}</string>
+									<string key="NSFrame">{{97, 481}, {606, 90}}</string>
 									<reference key="NSSuperview" ref="402592919"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="644428080"/>
@@ -1501,8 +1501,8 @@
 										<int key="NSCellFlags2">138412032</int>
 										<string key="NSContents">8888888</string>
 										<object class="NSFont" key="NSSupport">
-											<string key="NSName">Optima-Regular</string>
-											<double key="NSSize">80</double>
+											<string key="NSName">HiraMinPro-W3</string>
+											<double key="NSSize">78</double>
 											<int key="NSfFlags">16</int>
 										</object>
 										<string key="NSCellIdentifier">_NS:3944</string>
@@ -1515,7 +1515,7 @@
 										</object>
 										<object class="NSColor" key="NSTextColor">
 											<int key="NSColorSpace">1</int>
-											<bytes key="NSRGB">MSAwIDAAA</bytes>
+											<bytes key="NSRGB">MC4yMDAwMDAwMDMgMC4yMDAwMDAwMDMgMC4yMDAwMDAwMDMAA</bytes>
 										</object>
 									</object>
 								</object>
@@ -1538,7 +1538,7 @@
 									<reference key="NSSuperview" ref="402592919"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="920653541"/>
-									<double key="NSViewAlphaValue">0.80000000000000004</double>
+									<double key="NSViewAlphaValue">0.90000000000000002</double>
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 									<string key="NSReuseIdentifierKey">_NS:2141</string>
 									<bool key="NSEnabled">YES</bool>
@@ -1572,6 +1572,7 @@
 							<string key="NSFrame">{{683, 8}, {100, 26}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSReuseIdentifierKey">_NS:868</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1648,7 +1649,7 @@
 					<bool key="NSViewIsLayerTreeHost">YES</bool>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1366, 768}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1366, 746}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
@@ -2397,6 +2398,14 @@
 						<reference key="destination" ref="721514823"/>
 					</object>
 					<int key="connectionID">629</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">bkimage</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="655821384"/>
+					</object>
+					<int key="connectionID">630</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3983,7 +3992,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">629</int>
+			<int key="maxID">630</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4048,6 +4057,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>bkimage</string>
 							<string>message_label</string>
 							<string>remain</string>
 							<string>select_time</string>
@@ -4056,6 +4066,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -4067,6 +4078,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>bkimage</string>
 							<string>message_label</string>
 							<string>remain</string>
 							<string>select_time</string>
@@ -4075,6 +4087,10 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">bkimage</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">message_label</string>
 								<string key="candidateClassName">id</string>
