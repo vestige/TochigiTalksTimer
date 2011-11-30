@@ -1,17 +1,15 @@
 class AppDelegate
   attr_accessor :window
-  attr_accessor :remain
   attr_accessor :select_time
   attr_accessor :time_label
   attr_accessor :message_label
+  attr_accessor :bkimage
   
   def applicationDidFinishLaunching(a_notification)
-    # Insert code here to initialize your application
     setup_time_label()
 
     message_label.StringValue = ""
     @started = false
-
   end
 
   def init_disp_time(sec)
@@ -20,17 +18,27 @@ class AppDelegate
   end
 
   def setup_time_label()
-    #@count_sec = setup_time_listbox() * 60
-    #init_disp_time(@count_sec)
-    @count_sec = 10
-    init_disp_time(10)
+    @count_sec = setup_time_listbox()
+    init_disp_time(@count_sec)
   end
   
   def disp_time(time)
-    min, sec = time.divmod 60
-    text = sprintf("%d:%02d", min, sec)    
+    if isFinishReady(time) || isFinish(time)
+      color = NSColor.greenColor()
+      time_label.setTextColor(color) 
+    else
+      color = NSColor.blackColor()
+      time_label.setTextColor(color) 
+    end
     
-    @time_label.StringValue = text
+    min, sec = time.divmod 60    
+    text = sprintf("%d:%02d", min, sec)    
+
+    time_label.StringValue = text
+    
+    if isFinish(time)
+      time_label.StringValue = "88888"
+    end
   end
   
   def setup_time_listbox()
@@ -45,8 +53,8 @@ class AppDelegate
                                     atIndex:3)
     select_time.synchronizeTitleAndSelectedItem()
     select_time.selectItemAtIndex(1)
-    
-    return select_time.selectedItem.title.to_i
+
+    return select_time.selectedItem.title.to_i * 60
   end
   
   def update_select(sender)
@@ -73,19 +81,40 @@ class AppDelegate
     (@end_time - Time.now)
   end
 
+
+  def isFinishReady(time)
+    (1..10).member?(time)
+  end
+
+  def isFinish(time)
+    return (time == 0)
+  end
+  
+  def disp_label(time)
+    if isFinishReady(time)
+      message_label.StringValue = "拍手の準備を"
+    elsif isFinish(time)
+      message_label.StringValue = "拍手〜♪"
+    else
+      message_label.StringValue = ""
+    end
+  end
+  
+  def disp_back(time)
+    if isFinish(time)
+      bkimage.setAlphaValue(0.1)
+    else
+      bkimage.setAlphaValue(0.9)
+    end
+  end
+                
   def step(sender)    
     tmp = remain().floor
-    disp_time(tmp)
-    if (tmp < 5) && (tmp > 0)
-      message_label.StringValue = "Ready?"
+    clicked_stop(sender) if isFinish(tmp)
 
-      color = NSColor.yellowColor()
-      @time_label.setTextColor(color) 
-      
-    elsif (tmp == 0)
-      message_label.StringValue = "End"
-      clicked_stop(sender)
-    end
+    disp_label(tmp)
+    disp_time(tmp)
+    disp_back(tmp)
   end
 
   def clicked_stop(sender)
@@ -104,6 +133,8 @@ class AppDelegate
  
     @started = false
     disp_time(@init_sec)
+    disp_label(@init_sec)
+    disp_back(@init_sec)
   end
 end
 
