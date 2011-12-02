@@ -8,7 +8,7 @@ class AppDelegate
   def applicationDidFinishLaunching(a_notification)
     setup_time_label()
 
-    message_label.StringValue = ""
+    @message_label.StringValue = ""
     @started = false
   end
 
@@ -25,47 +25,47 @@ class AppDelegate
   def disp_time(time)
     if isFinishReady(time) || isFinish(time)
       color = NSColor.greenColor()
-      time_label.setTextColor(color) 
+      @time_label.setTextColor(color) 
     else
       color = NSColor.blackColor()
-      time_label.setTextColor(color) 
+      @time_label.setTextColor(color) 
     end
     
     min, sec = time.divmod 60    
     text = sprintf("%d:%02d", min, sec)    
 
-    time_label.StringValue = text
+    @time_label.StringValue = text
     
     if isFinish(time)
-      time_label.StringValue = "88888"
+      @time_label.StringValue = "88888"
     end
   end
   
   def setup_time_listbox()
-    select_time.removeAllItems()
-    select_time.insertItemWithTitle("1",
+    @select_time.removeAllItems()
+    @select_time.insertItemWithTitle("1",
                                     atIndex:0)
-    select_time.insertItemWithTitle("5",
+    @select_time.insertItemWithTitle("5",
                                     atIndex:1)
-    select_time.insertItemWithTitle("20",
+    @select_time.insertItemWithTitle("20",
                                     atIndex:2)
-    select_time.insertItemWithTitle("30",
+    @select_time.insertItemWithTitle("30",
                                     atIndex:3)
-    select_time.synchronizeTitleAndSelectedItem()
-    select_time.selectItemAtIndex(1)
+    @select_time.synchronizeTitleAndSelectedItem()
+    @select_time.selectItemAtIndex(1)
 
-    return select_time.selectedItem.title.to_i * 60
+    return @select_time.selectedItem.title.to_i * 60
   end
   
   def update_select(sender)
-    @count_sec = select_time.selectedItem.title.to_i * 60
+    @count_sec = @select_time.selectedItem.title.to_i * 60
     init_disp_time(@count_sec)
   end
 
   def clicked_start(sender)
     return if (@started)
     
-    select_time.setEnabled(false)
+    @select_time.setEnabled(false)
 
     @started = true
     @start_time = Time.now
@@ -92,19 +92,19 @@ class AppDelegate
   
   def disp_label(time)
     if isFinishReady(time)
-      message_label.StringValue = "拍手の準備を"
+      @message_label.StringValue = "拍手の準備を"
     elsif isFinish(time)
-      message_label.StringValue = "拍手〜♪"
+      @message_label.StringValue = "拍手〜♪"
     else
-      message_label.StringValue = ""
+      @message_label.StringValue = ""
     end
   end
   
   def disp_back(time)
     if isFinish(time)
-      bkimage.setAlphaValue(0.1)
+      @bkimage.setAlphaValue(0.1)
     else
-      bkimage.setAlphaValue(0.9)
+      @bkimage.setAlphaValue(0.9)
     end
   end
                 
@@ -120,7 +120,7 @@ class AppDelegate
   def clicked_stop(sender)
     return if (! @started)
     
-    select_time.setEnabled(true)
+    @select_time.setEnabled(true)
 
     @timer.invalidate
 
@@ -132,7 +132,7 @@ class AppDelegate
     return if (@started)
  
     @started = false
-    disp_time(@init_sec)
+    setup_time_label()
     disp_label(@init_sec)
     disp_back(@init_sec)
   end
