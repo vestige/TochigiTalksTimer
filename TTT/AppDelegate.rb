@@ -136,5 +136,11 @@ class AppDelegate
     disp_label(@init_sec)
     disp_back(@init_sec)
   end
+  
+  def demo(sender)
+    @count_sec = 30
+    clicked_start(sender)
+  end
+  
 end
 
