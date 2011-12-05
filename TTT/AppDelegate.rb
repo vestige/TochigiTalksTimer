@@ -132,7 +132,7 @@ class AppDelegate
     return if (@started)
  
     @started = false
-    setup_time_label()
+    init_disp_time(@init_sec)
     disp_label(@init_sec)
     disp_back(@init_sec)
   end
